@@ -1,0 +1,23 @@
+.footer>span {
+    align-self: center;
+    margin: auto;
+    font-size: 1.3em;
+    font-family: sans-serif;
+    border: none;
+    width: 9rem;
+    text-align: center;
+    display: block;
+}
+
+.footer {
+    display: flex;
+    flex-direction: row;
+    height: 6rem;
+    align-items: center;
+    background-color: #f5801e;
+    color: #eee;
+    margin-left: -1%;
+    margin-top: 4%;
+    width: inherit;
+    text-align: center;
+}

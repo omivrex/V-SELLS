@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+
+.welcomeBanner {
+  height: 113vh;
+  width: inherit;
+  position: relative;
+  top: 0vh;
+  margin: 0em 0 0 0em;
+  left: 0;
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  background-image: url(/_next/static/media/bannerImage.0806f7d8.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.title {
+  font-size: 12rem;
+  position: relative;
+  margin: auto 0 auto 6rem;
+  font-weight: 100;
+  color: #deedf2;
+  font-family: 'Roboto', sans-serif;
+  text-shadow: 1px 3px 20px black;
+}
+
+.small {
+  display: block;
+  font-size: 0.2em;
+  text-align: center;
+  text-shadow: none;
+}

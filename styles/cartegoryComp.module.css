@@ -1,0 +1,46 @@
+.cartegory {
+    height: 27rem;
+    position: relative;
+    max-width: 95vw;
+    margin: 50px auto;
+    background-color: #eee;
+}
+
+.name {
+    font-size: 2.2em;
+    width: inherit;
+    height: 14%;
+    padding: 9px 0px 1px 22px;
+    border-bottom: 1px solid #777;
+}
+
+.name>img {
+    float: right;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.prodWrapper {
+    width: inherit;
+    display: flex;
+    height: 22rem;
+    margin-top: 0.3em;
+}
+
+.product {
+    margin: auto;
+    height: inherit;
+    cursor: pointer;
+    padding-top: 17px;
+}
+
+.productImg {
+    height: 75%;
+    position: relative;
+}
+
+.price {
+    text-align: center;
+    font-size: 2.5em;
+    padding-top: 5px;
+}
