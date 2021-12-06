@@ -1,18 +1,16 @@
 .footer>span {
-    align-self: center;
-    margin: auto;
-    font-size: 1.3em;
-    font-family: sans-serif;
+    align-self: flex-start;
+    margin: auto 0 13px 10px;
+    font-size: 1.7em;
     border: none;
-    width: 9rem;
-    text-align: center;
     display: block;
+    padding: 7px;
 }
 
 .footer {
     display: flex;
-    flex-direction: row;
-    height: 6rem;
+    flex-direction: column;
+    height: fit-content;
     align-items: center;
     background-color: #f5801e;
     color: #eee;
