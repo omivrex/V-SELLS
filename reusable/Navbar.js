@@ -6,17 +6,17 @@ const Navbar = (props) => {
         <nav className="navbar">
           <a href="#" className="nav-logo">V-SELLS</a>
           <ul className="nav-menu">
+              <li className="nav-item search-container">
+                <input className="search-bar" placeholder="Search your for favorite product"/>
+              </li>
               <li className="nav-item">
-                {props.shouldRenderShoppingCart}
+                  <a href="#" className="nav-link">Call To Order</a>
               </li>
               <li className="nav-item">
                   <a href="#" className="nav-link">Sell</a>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link">About</a>
-              </li>
-              <li className="nav-item">
-                  <a href="#" className="nav-link">Contact</a>
+                  <a href="#" className="nav-link">Region</a>
               </li>
           </ul>
           <div className="hamburger">

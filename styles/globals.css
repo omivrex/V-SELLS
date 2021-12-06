@@ -53,6 +53,13 @@ a {
   background-color: #deedf2;
 }
 
+.search-bar {
+  border: none;
+  padding: 10px;
+  width: 270px;
+  border-radius: 5px;
+}
+
 .nav-menu {
   display: flex;
   justify-content: space-between;
@@ -81,17 +88,16 @@ a {
 
 @media only screen and (max-width: 768px) {
   .nav-menu {
-      position: fixed;
-      left: -100%;
-      top: 5rem;
-      flex-direction: column;
-      background-color: #d56100;
-      width: 100%;
-      border-radius: 10px;
-      text-align: center;
-      transition: 0.3s;
-      box-shadow:
-          0 10px 27px rgba(0, 0, 0, 0.05);
+    position: fixed;
+    left: -100%;
+    top: 5rem;
+    flex-direction: column;
+    background-color: #d56100;
+    width: 100%;
+    border-radius: 10px;
+    text-align: center;
+    transition: 0.3s;
+    box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
 
   .nav-menu.active {

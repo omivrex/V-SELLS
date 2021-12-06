@@ -4,6 +4,7 @@
     max-width: 95vw;
     margin: 50px auto;
     background-color: #eee;
+    border-radius: 5px;
 }
 
 .name {
@@ -12,6 +13,7 @@
     height: 14%;
     padding: 9px 0px 1px 22px;
     border-bottom: 1px solid #777;
+    font-family: sans-serif;
 }
 
 .name>img {
@@ -41,8 +43,9 @@
 
 .price {
     text-align: center;
-    font-size: 2.5em;
+    font-size: 2em;
     padding-top: 5px;
+    font-family: sans-serif;
 }
 
 @media only screen and (max-width: 768px) {
@@ -51,7 +54,7 @@
     }
 
     .price {
-        font-size: 1.6em;
+        font-size: 1.1em;
     }
 
     .cartegory {
@@ -66,12 +69,16 @@
 
 @media only screen and (max-width: 430px) {
     .productImg {
-        height: 26%;
+        height: 23%;
     }
 
     .name {
-        font-size: 1.5em;
-        height: 19%;
+        font-size: 1.1em;
+        height: 18%;
+    }
+
+    .name>img {
+        height: 11px;
     }
 
     .cartegory {

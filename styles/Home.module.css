@@ -10,7 +10,7 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background-image: url(/_next/static/media/bannerImage.0806f7d8.jpg);
+  background-image: url("../public/bannerImage.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -34,7 +34,7 @@
 
 @media only screen and (max-width: 768px) {
   .title {
-    font-size: 6rem;
+    font-size: 5rem;
   }
 
   .welcomeBanner {
