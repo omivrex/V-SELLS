@@ -1,14 +1,14 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 62.5%;
-    font-family: 'Roboto', sans-serif;
+  font-size: 62.5%;
+  font-family: 'Roboto', sans-serif;
 }
 
 body {
@@ -16,11 +16,11 @@ body {
 }
 
 li {
-    list-style: none;
+  list-style: none;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 .header{
@@ -57,7 +57,7 @@ a {
   border: none;
   padding: 10px;
   width: 270px;
-  border-radius: 5px;
+  border-radius: 5px 0px 0 5px;
 }
 
 .nav-menu {
@@ -68,6 +68,17 @@ a {
 
 .nav-item {
   margin-left: 5rem;
+}
+
+.nav-item>span {
+  width: 34px;
+  height: 35.5px;
+  position: absolute;
+  background: #fff;
+  border-radius: 0 5px 5px 0px;
+  padding: 5px;
+  border-left: 1px dotted #000;
+  cursor: pointer;
 }
 
 .nav-link{

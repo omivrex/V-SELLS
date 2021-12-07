@@ -8,6 +8,7 @@ const Navbar = (props) => {
           <ul className="nav-menu">
               <li className="nav-item search-container">
                 <input className="search-bar" placeholder="Search your for favorite product"/>
+                <span title="search"><img style={{width: '100%'}} src="./search.svg"/></span>
               </li>
               <li className="nav-item">
                   <a href="#" className="nav-link">Call To Order</a>
