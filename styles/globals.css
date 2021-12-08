@@ -30,6 +30,7 @@ a {
   position: fixed;
   z-index: 10;
   width: 100%;
+  top: 0;
 }
 
 .navbar {
@@ -112,16 +113,20 @@ a {
   }
 
   .nav-menu.active {
-      left: 0;
+    left: 0;
   }
 
   .nav-item {
-      margin: 2.5rem 0;
+    margin: 2.5rem 0;
+  }
+
+  .nav-item:nth-child(1) {
+    margin-left: -35px;
   }
 
   .hamburger {
-      display: block;
-      cursor: pointer;
+    display: block;
+    cursor: pointer;
   }
 
   .hamburger.active .bar:nth-child(2) {

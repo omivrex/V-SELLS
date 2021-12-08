@@ -17,8 +17,7 @@ export default function Home() {
         <Navbar shouldRenderShoppingCart = {false}></Navbar>
         <div className={styles.welcomeBanner}>
           <h1 className={styles.title}>
-              V-SELLS
-              <br/>
+            V-SELLS
             <small className={styles.small}>Where all asscesories are available.</small>
           </h1>
         </div>

@@ -29,34 +29,7 @@
     margin-top: 0.3em;
 }
 
-.product {
-    margin: auto;
-    height: inherit;
-    cursor: pointer;
-    padding-top: 17px;
-}
-
-.productImg {
-    height: 65%;
-    position: relative;
-}
-
-.price {
-    text-align: center;
-    font-size: 2em;
-    padding-top: 5px;
-    font-family: sans-serif;
-}
-
 @media only screen and (max-width: 768px) {
-    .productImg {
-        height: 38%;
-    }
-
-    .price {
-        font-size: 1.1em;
-    }
-
     .cartegory {
         height: 20rem;
     }
@@ -68,10 +41,6 @@
 }
 
 @media only screen and (max-width: 430px) {
-    .productImg {
-        height: 23%;
-    }
-
     .name {
         font-size: 1.1em;
         height: 18%;

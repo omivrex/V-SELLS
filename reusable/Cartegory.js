@@ -1,14 +1,12 @@
 import styles from '../styles/cartegoryComp.module.css'
+import Product from '../reusable/Product'
 
 const noOfProductsToDisp = 5
 const products = []
 
 for (let index = 0; index < noOfProductsToDisp; index++) {
     products.push(
-        <div key={index} className={styles.product}>
-            <img className={styles.productImg} src="./product.jpg"/>
-            <div className={styles.price}>$190</div>
-        </div>
+        <Product key={index}/>
     )
 }
 
