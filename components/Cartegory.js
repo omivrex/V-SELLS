@@ -1,5 +1,5 @@
 import styles from '../styles/cartegoryComp.module.css'
-import Product from '../reusable/Product'
+import Product from './Product'
 
 const noOfProductsToDisp = 5
 const products = []

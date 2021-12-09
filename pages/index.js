@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Navbar from '../reusable/navbar'
-import Cartegory from '../reusable/Cartegory'
-import Footer from '../reusable/Footer'
+import Navbar from '../components/navbar'
+import Cartegory from '../components/Cartegory'
+import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
 
 

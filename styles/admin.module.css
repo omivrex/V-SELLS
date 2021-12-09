@@ -1,0 +1,79 @@
+.formWrapper {
+    display: flex;
+    margin: 15rem auto 17rem auto;
+    background: #fff;
+    width: 41rem;
+    height: 61vh;
+    flex-direction: column;
+    align-content: space-between;
+    justify-items: center;
+    align-items: center;
+    justify-content: center;
+    -webkit-box-shadow: 0 0 12px 0 #d56100;
+    box-shadow: 0 0 12px 0 #d56100;
+    border-radius: 12px;
+    flex-wrap: nowrap;
+}
+
+.header {
+    padding: 1.5rem;
+    font-size: 2em;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-items: center;
+    flex: 1;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+}
+
+.header>small {
+    padding: 0.7rem;
+    font-size: 0.7em;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    width: inherit;
+    align-items: center;
+    flex: 2;
+    margin: auto;
+}
+
+.inputWrapper {
+    width: 80%;
+    display: flex;
+    height: 4rem;
+    margin: 1.9rem;
+    flex-direction: row;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.inputWrapper>label {
+    margin: auto;
+    flex: 0.7;
+    font-size: 1.1em;
+}
+
+.inputWrapper>input {
+    flex: 2 1;
+    text-align: center;
+    height: 77%;
+    margin: auto;
+}
+
+.signInButn {
+    padding: 0.8rem;
+    width: 11.1rem;
+    cursor: pointer;
+    border: none;
+    background: #ffbd52;
+    color: #eee;
+    margin: 1.3rem;
+    font-size: 1.4em;
+    text-align: center;
+    width: 55%;
+}

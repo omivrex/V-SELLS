@@ -1,7 +1,7 @@
 import Head from 'next/head'
-import Navbar from '../reusable/navbar'
-import Footer from '../reusable/Footer'
-import Product from '../reusable/Product'
+import Navbar from '../components/navbar'
+import Footer from '../components/Footer'
+import Product from '../components/Product'
 import styles from '../styles/cartPage.module.css'
 import { useRouter } from 'next/router';
 
