@@ -1,3 +1,5 @@
+import Script from 'next/script';
+
 const Navbar = (props) => {
     return ( 
       <header className="header">
@@ -24,7 +26,7 @@ const Navbar = (props) => {
               <span className="bar"></span>
           </div>
         </nav>
-        <script type="text/javascript" src="./scripts/homepageInteraction.js"></script>
+        <Script type="text/javascript" src="./scripts/homepageInteraction.js"/>
       </header>
     );
 }

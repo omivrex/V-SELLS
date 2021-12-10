@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Script from 'next/script'
 import Navbar from '../components/navbar'
 import Footer from '../components/Footer'
 import Link from "next/link"
@@ -38,7 +39,7 @@ const Admin = () => {
                 </div>
             </div>
             <Footer/>
-            <script src="/scripts/sell-auth.js"/>
+            <Script src="/scripts/sell-auth.js"/>
         </>
      );
 }
