@@ -6,7 +6,7 @@ const Navbar = (props) => {
     return ( 
       <header className="header">
         <nav className="navbar">
-          <a href="#" className="nav-logo">V-SELLS</a>
+          <a href="/" className="nav-logo">V-SELLS</a>
           <ul className="nav-menu">
               <li className="nav-item search-container">
                 <input className="search-bar" placeholder="Search your for favorite product"/>

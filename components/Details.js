@@ -25,9 +25,10 @@ const Details = ({displayValue, onclick}) => {
                     </div>
                     <div className={styles.productFullName}>
                         Skechers Unisex-Child Mega-Surge Sneaker
+                        <div className={styles.price}>$190</div>
                     </div>
-                    <div className={styles.price}>
-                        $190
+                    <div className={styles.buyButn}>
+                        BUY
                     </div>
                 </div>
                 <div className={styles.details}>

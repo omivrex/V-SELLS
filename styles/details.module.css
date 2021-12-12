@@ -78,6 +78,7 @@
     flex: 2;
     flex-direction: column;
     margin: auto;
+    max-width: 250px;
 }
 
 .imgAndPriceWrapper>div {
@@ -96,6 +97,11 @@
 }
 
 .price {
+    text-align: center;
+    width: 250px
+}
+
+.buyButn {
     font-size: 2em;
     width: 250px;
     text-align: center;
@@ -103,18 +109,16 @@
     color: #eee;
     height: fit-content;
     padding: 1rem;
+    cursor: pointer;
 }
 
 .details {
     display: flex;
     flex: 2;
     flex-direction: column;
-    float: right;
-    /* width: 90%; */
-    margin-inline: 5rem;
     height: 100%;
     padding: 2rem;
-    margin: auto;
+    margin: 0 1.7em auto 1.7em;
     font-size: 1.3em;
 }
 
