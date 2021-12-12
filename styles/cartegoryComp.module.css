@@ -5,6 +5,7 @@
     margin: 50px auto;
     background-color: #eee;
     border-radius: 5px;
+    animation: slideInUp 1.5s forwards ease;
 }
 
 .name {
@@ -16,10 +17,11 @@
     font-family: sans-serif;
 }
 
-.name>img {
+.Image {
     float: right;
     margin-right: 20px;
     cursor: pointer;
+    width: 3rem;
 }
 
 .prodWrapper {
@@ -38,6 +40,10 @@
         font-size: 1.8em;
         height: 21%;
     }
+
+    .Image {
+        width: 1rem;
+    }
 }
 
 @media only screen and (max-width: 430px) {
@@ -52,5 +58,18 @@
 
     .cartegory {
         height: 15rem;
+    }
+}
+
+@keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
 }

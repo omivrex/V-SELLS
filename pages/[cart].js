@@ -1,21 +1,23 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Footer from '../components/Footer'
-import Product from '../components/Product'
+import Navbar from '/components/navbar'
+import Footer from '/components/Footer'
+import Product from '/components/Product'
+import Filter from '/components/Filter'
+import Details from '/components/Details'
 import styles from '../styles/cartPage.module.css'
 import { useRouter } from 'next/router';
+import { useState } from 'react'
 
 const noOfProductsToDisp = 6*10
 const products = []
-
 for (let index = 0; index < noOfProductsToDisp; index++) {
-    products.push(
-        <Product key={index}/>
-    )
+    products.push(index)
 }
+
 
 const CartPage = () => {
     const { query } = useRouter();
+    const [displayValue, setdisplayValue] = useState({display: 'none'})
     return (
         <div>
             <Head>
@@ -29,11 +31,19 @@ const CartPage = () => {
             </div>
             <main className={styles.main}>
                 <div className={styles.filterPannel}>
-
+                    <h2 className={styles.filterHeader}>Filters</h2>
+                    <ul className={styles.ul}>
+                        <Filter/>
+                        <Filter/>
+                        <Filter/>
+                        <Filter/>
+                        <Filter/>
+                    </ul>
                 </div>
                 <div className={styles.productWrapper}>
-                    {products}
+                    {products.map((index)=> <Product onclick={()=> setdisplayValue({display: 'flex'})} styles={{margin: '8px'}} key={index} index={index}/>)}
                 </div>
+                <Details onclick={()=> setdisplayValue({display: 'none'})} displayValue={displayValue}/>
             </main>
             <Footer/>
         </div>

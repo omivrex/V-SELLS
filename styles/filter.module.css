@@ -1,0 +1,33 @@
+.filter {
+    font-size: 1.4em;
+    padding: 1rem;
+    font-weight: 900;
+    width: inherit;
+}
+
+.dropDownIcon {
+    float: right
+}
+
+.filterContentWrapper {
+    border-top: 1px solid #777;
+    display: block;
+}
+
+.content {
+    font-weight: 300;
+    padding: 0.6rem;
+}
+
+.filterName {
+    width: 100%;
+    display: block;
+    padding: 7px;
+}
+
+@media screen and (max-width: 768px) {
+    .filter {
+        font-size: 0.9em;
+        padding: 0rem;
+    }
+}

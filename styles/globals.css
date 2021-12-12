@@ -35,7 +35,7 @@ a {
 
 .navbar {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   align-items: center;
   padding: 1rem 1.5rem;
 }
@@ -57,7 +57,7 @@ a {
 .search-bar {
   border: none;
   padding: 10px;
-  width: 270px;
+  flex: 2;
   border-radius: 5px 0px 0 5px;
 }
 
@@ -65,16 +65,22 @@ a {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  margin-left: 32rem;
 }
 
 .nav-item {
   margin-left: 5rem;
 }
 
+.nav-item:nth-child(1) {
+  display: flex;
+  width: 90%;
+}
+
 .nav-item>span {
-  width: 34px;
-  height: 35.5px;
-  position: absolute;
+  flex: 0.17;
+  /* height: 35.5px; */
+  /* position: absolute; */
   background: #fff;
   border-radius: 0 5px 5px 0px;
   padding: 5px;
@@ -98,6 +104,16 @@ a {
   color: #deedf2;
 }
 
+.shopping-cart-wrapper {
+  align-self: flex-end;
+  margin: auto;
+  margin-inline-end: 1rem;
+}
+
+.shopping-cart {
+  cursor: pointer;
+}
+
 @media only screen and (max-width: 768px) {
   .nav-menu {
     position: fixed;
@@ -108,6 +124,7 @@ a {
     width: 100%;
     border-radius: 10px;
     text-align: center;
+    margin-left: 0rem;
     transition: 0.3s;
     box-shadow: 0 10px 27px rgba(0, 0, 0, 0.05);
   }
@@ -120,9 +137,9 @@ a {
     margin: 2.5rem 0;
   }
 
-  .nav-item:nth-child(1) {
+  /* .nav-item:nth-child(1) {
     margin-left: -35px;
-  }
+  } */
 
   .hamburger {
     display: block;

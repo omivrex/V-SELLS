@@ -1,4 +1,6 @@
 import Script from 'next/script';
+import { BiCartAlt } from 'react-icons/bi';
+import { IconContext } from "react-icons";
 
 const Navbar = (props) => {
     return ( 
@@ -17,9 +19,14 @@ const Navbar = (props) => {
                   <a href="#" className="nav-link">Sell</a>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link">Region</a>
+                  <a href="#" className="nav-link">Currency</a>
               </li>
           </ul>
+              <div className='shopping-cart-wrapper'>
+                <IconContext.Provider value={{ className: 'shopping-cart', size: '3rem' }}>
+                  <BiCartAlt/>
+                </IconContext.Provider>
+              </div>
           <div className="hamburger">
               <span className="bar"></span>
               <span className="bar"></span>

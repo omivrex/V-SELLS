@@ -1,0 +1,133 @@
+.cover {
+    position: fixed;
+    background: #35419563;
+    width: 100vw;
+    display: flex;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 11;
+    padding-top: 67px;
+}
+
+.detailsWrapper {
+    background-color: #eee;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    width: 78rem;
+    height: 51rem;
+    margin: auto;
+    padding: 3rem;
+    flex-wrap: wrap;
+    animation: backInDown 0.3s forwards;
+}
+
+@keyframes backInDown {
+    0% {
+      -webkit-transform: translateY(-1200px) scale(0.7);
+      transform: translateY(-1200px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    80% {
+      -webkit-transform: translateY(0px) scale(0.7);
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+}
+
+@keyframes backOutUp {
+    0% {
+      -webkit-transform: scale(1);
+      transform: scale(1);
+      opacity: 1;
+    }
+  
+    20% {
+      -webkit-transform: translateY(0px) scale(0.7);
+      transform: translateY(0px) scale(0.7);
+      opacity: 0.7;
+    }
+  
+    100% {
+      -webkit-transform: translateY(-700px) scale(0.7);
+      transform: translateY(-700px) scale(0.7);
+      opacity: 0.7;
+    }
+}
+
+.closeCover {
+    padding-left: 100%;
+    margin-top: -26px;
+}
+
+.close {
+    cursor: pointer;
+    position: absolute;
+}
+
+.imgAndPriceWrapper {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    margin: auto;
+}
+
+.imgAndPriceWrapper>div {
+    margin-bottom: 1.5rem;
+}
+
+.productImg {
+    height: fit-content;
+    width: fit-content;
+}
+
+.productFullName {
+    font-size: 2.7em;
+    height: fit-content;
+    padding-inline: 0.4em;
+}
+
+.price {
+    font-size: 2em;
+    width: 250px;
+    text-align: center;
+    background-color: #d46202;
+    color: #eee;
+    height: fit-content;
+    padding: 1rem;
+}
+
+.details {
+    display: flex;
+    flex: 2;
+    flex-direction: column;
+    float: right;
+    /* width: 90%; */
+    margin-inline: 5rem;
+    height: 100%;
+    padding: 2rem;
+    margin: auto;
+    font-size: 1.3em;
+}
+
+.detailsHeader {
+    font-size: 3em;
+}
+
+.details>p {
+    overflow-y: auto;
+}
+
+@media screen and (max-width: 470px) {
+    .detailsWrapper {
+        overflow-y: auto;
+    }
+}

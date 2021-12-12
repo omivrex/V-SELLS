@@ -1,12 +1,20 @@
+/* @import 'animate.css'; */
+
 .product {
     margin: auto;
     height: inherit;
+    width: 14rem;
     cursor: pointer;
-    padding: 24px;
+    padding: 4px;
+    padding-top: 24px;
+}
+
+.product:hover {
+    animation: 0.5s ease 0s 1 normal pulse !important;
 }
 
 .productImg {
-    width: 15rem;
+    width: inherit;
     position: relative;
 }
 
@@ -15,20 +23,51 @@
     font-size: 1.3em;
     padding-top: 5px;
     font-family: sans-serif;
+    width: inherit;
 }
 
 @media only screen and (max-width: 768px) {
-    .productImg {
-        width: 38%;
+    .product {
+        width: 8.7rem;
     }
-
+    
     .price {
         font-size: 1.1em;
     }
 }
 
 @media only screen and (max-width: 430px) {
-    .productImg {
-        width: 23%;
+    .product {
+        width: 5rem;
+    }
+}
+
+@keyframes pulse {
+    from {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+  
+    50% {
+      -webkit-transform: scale3d(1.05, 1.05, 1.05);
+      transform: scale3d(1.05, 1.05, 1.05);
+    }
+  
+    to {
+      -webkit-transform: scale3d(1, 1, 1);
+      transform: scale3d(1, 1, 1);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+      -webkit-transform: translate3d(0, 100%, 0);
+      transform: translate3d(0, 100%, 0);
+      visibility: visible;
+    }
+  
+    to {
+      -webkit-transform: translate3d(0, 0, 0);
+      transform: translate3d(0, 0, 0);
     }
 }

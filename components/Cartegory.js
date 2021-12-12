@@ -1,5 +1,6 @@
 import styles from '../styles/cartegoryComp.module.css'
 import Product from './Product'
+import Image from 'next/image'
 
 const noOfProductsToDisp = 5
 const products = []
@@ -15,7 +16,9 @@ const Cartegory = () => {
         <div className={styles.cartegory}>
             <div className={styles.name}>
                 Checkout The Best Fitting Footwear
-                <img src="./forward.svg"/>
+                <span className={styles.Image}>
+                    <Image width={17} height={17} src="/forward.svg"/>
+                </span>
             </div>
             <div className={styles.prodWrapper}>
                 {products}
