@@ -12,21 +12,24 @@ const Store = () => {
     const isOutOfStock = useRef()
     const productImg = useRef()
 
-    const addProduct = () => {
+    const addProduct = async () => {
         event.preventDefault()
         const formData = new FormData();
         formData.append('name', name.current)
         formData.append('price', price.current)
         formData.append('cartegories', cartegories.current)
-        formData.append('isHotSale', isHotSale.current)
-        formData.append('isOutOfStock', isOutOfStock.current)
+        formData.append('isHotSale', isHotSale.current.checked)
+        formData.append('isOutOfStock', isOutOfStock.current.checked)
         formData.append('details', details.current)
         formData.append('img', fileInput.current.files[0])
-        const res = fetch('/api/product/add', { 
+        await sendAddReq(formData)
+    }
+
+    const sendAddReq = async formData => {
+        const res = await fetch('/api/product/add', { 
             body: formData,
             method: 'POST'
         })
-      
     }
     return ( 
         <>
@@ -47,11 +50,11 @@ const Store = () => {
                         </div>
                         <div>
                             <label>Hot Sale</label>
-                            <input required onInput={(e)=> isHotSale.current = e.target.value} type="checkbox"/>
+                            <input ref={isHotSale} required type="checkbox"/>
                         </div>
                         <div>
                             <label>Out Of Stock</label>
-                            <input required onInput={(e)=> isOutOfStock.current = e.target.value} type="checkbox"/>
+                            <input ref={isOutOfStock} required type="checkbox"/>
                         </div>
                     </div>
                     <div className={styles.imgAndButnWrapper}>

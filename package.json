@@ -11,6 +11,7 @@
     "animate.css": "^4.1.1",
     "formidable": "^2.0.1",
     "mongodb": "^4.2.1",
+    "mongoose": "^6.1.2",
     "netlify-identity-widget": "^1.9.2",
     "next": "12.0.6",
     "next-auth": "4.0.5",
