@@ -17,8 +17,8 @@ export default function (req, res) {
             console.log({...fields, images: files});
             connectToDb(async isConnected => {
                 if (isConnected) {
-                    const newProduct = new ProductModel({...fields, images: files})
-                    console.log(newProduct);
+                    const newProduct = new ProductModel({...fields, ...{images: files}})
+                    console.log(newProduct, 'add.js line 21');
                     await newProduct.save()
                     res.status = 200;
                     res.send('recieved...')
