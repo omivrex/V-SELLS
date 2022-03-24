@@ -29,7 +29,7 @@ const productSchema = new Schema({
     }
 })
 
-models = {}
+for (let prop in models) delete models[prop] //empty model
 const ProductModel = model('products', productSchema); /** if model is existing just use it else create it */
 
 export default ProductModel

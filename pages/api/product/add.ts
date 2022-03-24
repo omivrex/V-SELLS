@@ -10,14 +10,23 @@ export const config = {
     }
 }
 
-export default function (req, res) {
+type filedType = {
+    name: String,
+    price: String,
+    cartegories: String[],
+    details: String,
+    isHotSale: Boolean,
+    isOutOfStock: Boolean,
+}
+
+export default function (req:any, res:any) {
     try {
-        form.parse(req, (err, fields, files) => {
+        form.parse(req, (err:string, fields:filedType, image:Blob) => {
             err? console.error(err):"";
-            console.log({...fields, images: files});
-            connectToDb(async isConnected => {
+            console.log({...fields, image});
+            connectToDb(async (isConnected:boolean) => {
                 if (isConnected) {
-                    const newProduct = new ProductModel({...fields, ...{images: files}})
+                    const newProduct = new ProductModel({...fields, image})
                     console.log(newProduct, 'add.js line 21');
                     await newProduct.save()
                     res.status = 200;
@@ -26,6 +35,6 @@ export default function (req, res) {
             })
         });
     } catch (error) {
-        console.throw(error);
+        console.error(error);
     }
 }
