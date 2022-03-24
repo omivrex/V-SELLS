@@ -1,11 +1,11 @@
 import Head from 'next/head'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Cartegory from '../components/Cartegory'
 import Footer from '../components/Footer'
 import styles from '../styles/Home.module.css'
+import { ReactElement } from 'react'
 
-
-export default function Home() {
+export default function Home():ReactElement {
   return (
     <div className={styles.container}>
       <Head>

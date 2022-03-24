@@ -3,14 +3,14 @@ import styles from '../styles/details.module.css'
 import { AiOutlineClose } from 'react-icons/ai';
 import { IconContext } from "react-icons";
 
-const Details = ({displayValue, onclick}) => {
+const Details = ({displayValue, onclick}:any) => {
     return ( 
         <div style={displayValue} id='cover' className={styles.cover}>
             <div id="detailsWrapper" className={styles.detailsWrapper}>
                 <div className={styles.closeCover}>
                     <IconContext.Provider value={{ className: styles.close, size: '2.4rem' }}>
                         <AiOutlineClose onClick={()=> {
-                            const detailsWrapper = document.getElementById('detailsWrapper')
+                            const detailsWrapper:any = document.getElementById('detailsWrapper')
                             detailsWrapper.style.animation = 'backOutUp 0.3s forwards'
                             setTimeout(() => {
                                 onclick()

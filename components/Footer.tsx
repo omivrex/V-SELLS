@@ -1,6 +1,7 @@
 import styles from '../styles/footer.module.css'
+import { ReactElement } from 'react'
 
-const Footer = () => {
+const Footer = ():ReactElement => {
     return ( 
       <footer className={styles.footer}>
         <span>Phone: +2347084973294</span>

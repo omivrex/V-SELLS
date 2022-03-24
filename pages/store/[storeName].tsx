@@ -1,25 +1,27 @@
 import { useRef } from "react";
 import styles from "../../styles/store.module.css";
 import { AiOutlinePicture } from 'react-icons/ai';
+import { ReactElement } from 'react'
 
-const Store = () => {
+const Store = ():ReactElement => {
+    
     const fileInput = useRef()
-    const name = useRef()
-    const price = useRef()
-    const cartegories = useRef([])
-    const details = useRef()
-    const isHotSale = useRef()
-    const isOutOfStock = useRef()
-    const productImg = useRef()
+    const name = useRef<string|Blob>('')
+    const price = useRef<string|Blob>('')
+    const cartegories = useRef<[string|Blob]>([''])
+    const details = useRef<string|Blob>('')
+    const isHotSale = useRef<string|Blob>('')
+    const isOutOfStock = useRef<string|Blob>('')
+    const productImg = useRef<any>()
 
-    const addProduct = async () => {
+    const addProduct = async (event: any) => {
         event.preventDefault()
         const formData = new FormData();
         formData.append('name', name.current)
         formData.append('price', price.current)
         formData.append('cartegories', cartegories.current)
-        formData.append('isHotSale', isHotSale.current.checked)
-        formData.append('isOutOfStock', isOutOfStock.current.checked)
+        formData.append('isHotSale', isHotSale.current)
+        formData.append('isOutOfStock', isOutOfStock.current)
         formData.append('details', details.current)
         formData.append('img', fileInput.current.files[0])
         await sendAddReq(formData)
@@ -50,11 +52,11 @@ const Store = () => {
                         </div>
                         <div>
                             <label>Hot Sale</label>
-                            <input ref={isHotSale} required type="checkbox"/>
+                            <input onChange = {(e) =>isHotSale.current = e.target.checked} required type="checkbox"/>
                         </div>
                         <div>
                             <label>Out Of Stock</label>
-                            <input ref={isOutOfStock} required type="checkbox"/>
+                            <input onChange = {(e) =>isOutOfStock.current = e.target.checked} required type="checkbox"/>
                         </div>
                     </div>
                     <div className={styles.imgAndButnWrapper}>

@@ -1,9 +1,9 @@
 import styles from '../styles/cartegoryComp.module.css'
 import Product from './Product'
 import Image from 'next/image'
-
+import { ReactElement } from 'react'
 const noOfProductsToDisp = 5
-const products = []
+const products:ReactElement[] = []
 
 for (let index = 0; index < noOfProductsToDisp; index++) {
     products.push(
@@ -11,7 +11,7 @@ for (let index = 0; index < noOfProductsToDisp; index++) {
     )
 }
 
-const Cartegory = () => {
+const Cartegory = ():ReactElement => {
     return ( 
         <div className={styles.cartegory}>
             <div className={styles.name}>

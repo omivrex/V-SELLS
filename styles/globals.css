@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,500;1,400&display=swap");
 
 * {
   margin: 0;
@@ -8,11 +8,11 @@
 
 html {
   font-size: 62.5%;
-  font-family: 'Roboto', sans-serif;
+  font-family: "Roboto", sans-serif;
 }
 
 body {
-  background: linear-gradient(to right,  #ffbd52 28%, #ff9d42 99%);
+  background: linear-gradient(to right, #ffbd52 28%, #ff9d42 99%);
 }
 
 li {
@@ -23,9 +23,9 @@ a {
   text-decoration: none;
 }
 
-.header{
-  border-bottom: 1px solid #E2E8F0;
-  background-color: #ffbd52;
+.header {
+  border-bottom: 1px solid #e2e8f0;
+  background-color: #0069ff;
   color: #deedf2 !important;
   position: fixed;
   z-index: 10;
@@ -77,31 +77,34 @@ a {
   width: 90%;
 }
 
-.nav-item>span {
-  flex: 0.17;
-  /* height: 35.5px; */
-  /* position: absolute; */
+.nav-item > span {
+  flex: 0.17 1;
   background: #fff;
   border-radius: 0 5px 5px 0px;
   padding: 5px;
   border-left: 1px dotted #000;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-.nav-link{
+.nav-link {
   font-size: 1.6rem;
   font-weight: 400;
   color: #deedf2;
 }
 
-.nav-link:hover{
+.nav-link:hover {
   color: #777;
 }
 
 .nav-logo {
-  font-size: 2.1rem;
-  font-weight: 500;
+  font-size: 1.8rem;
   color: #deedf2;
+  text-align: center;
+  width: 7.8rem;
+  height: 100%;
 }
 
 .shopping-cart-wrapper {
@@ -157,5 +160,4 @@ a {
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
   }
-
 }

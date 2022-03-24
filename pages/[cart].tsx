@@ -1,21 +1,21 @@
 import Head from 'next/head'
-import Navbar from '/components/navbar'
+import Navbar from '/components/Navbar'
 import Footer from '/components/Footer'
 import Product from '/components/Product'
 import Filter from '/components/Filter'
 import Details from '/components/Details'
 import styles from '../styles/cartPage.module.css'
 import { useRouter } from 'next/router';
-import { useState } from 'react'
+import { useState, ReactElement } from 'react'
 
 const noOfProductsToDisp = 6*10
-const products = []
+const products:number[] = []
 for (let index = 0; index < noOfProductsToDisp; index++) {
     products.push(index)
 }
 
 
-const CartPage = () => {
+const CartPage = ():ReactElement => {
     const { query } = useRouter();
     const [displayValue, setdisplayValue] = useState({display: 'none'})
     return (

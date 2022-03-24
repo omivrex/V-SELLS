@@ -1,8 +1,8 @@
 import Script from 'next/script';
 import { BiCartAlt } from 'react-icons/bi';
 import { IconContext } from "react-icons";
-
-const Navbar = (props) => {
+import { ReactElement } from 'react'
+const Navbar = (props:any):ReactElement => {
     return ( 
       <header className="header">
         <nav className="navbar">

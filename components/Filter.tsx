@@ -1,6 +1,7 @@
 import styles from '../styles/filter.module.css'
+import { ReactElement } from 'react'
 
-const Filter = () => {
+const Filter = ():ReactElement => {
     return ( 
         <li className={styles.filter}>
             <span className={styles.filterName}>

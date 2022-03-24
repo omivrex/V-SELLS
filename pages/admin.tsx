@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Script from 'next/script'
-import Navbar from '../components/navbar'
+import Navbar from '../components/Navbar'
 import Footer from '../components/Footer'
 import Link from "next/link"
 import { signIn, useSession } from "next-auth/react"
