@@ -23,9 +23,10 @@ const productSchema = new Schema({
     isOutOfStock: {
         type: Boolean,
     },
-    images: {
-        data: Buffer,
-        contentType: Buffer
+    image: {
+        type: Buffer,
+        required: true,
+        contentType: String,
     }
 })
 

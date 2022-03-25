@@ -3,8 +3,7 @@ import { env } from 'process';
 
 const connectToDb = async (callback:any) => {
     try {
-        const connection = mongoose.connect(env.DB_URL as string)
-        console.log(connection)
+        const connection = await mongoose.connect(env.DB_URL as string)
         await callback(connection)
         mongoose.connection.close()
     } catch (error) {

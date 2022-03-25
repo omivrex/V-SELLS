@@ -2,7 +2,7 @@ import connectToDb from "../middleware/mongodbConnect.middleware";
 import ProductModel from "../models/product.model";
 const formidable = require('formidable');
 
-const form = formidable({ multiples: true});
+const form = formidable({ multiples: false});
 
 export const config = {
     api: {
@@ -13,7 +13,7 @@ export const config = {
 type filedType = {
     name: String,
     price: String,
-    cartegories: String[],
+    cartegories: any,
     details: String,
     isHotSale: Boolean,
     isOutOfStock: Boolean,
@@ -23,7 +23,8 @@ export default function (req:any, res:any) {
     try {
         form.parse(req, (err:string, fields:filedType, image:Blob) => {
             err? console.error(err):"";
-            console.log({...fields, image});
+            fields.cartegories = JSON.parse(fields.cartegories) as string[];
+            console.log('image sent', image);
             connectToDb(async (isConnected:boolean) => {
                 if (isConnected) {
                     const newProduct = new ProductModel({...fields, image})

@@ -10,8 +10,8 @@ const Store = ():ReactElement => {
     const price = useRef<string|Blob>('')
     const cartegories = useRef<string[]>([''])
     const details = useRef<string|Blob>('')
-    const isHotSale = useRef<string|Blob>('')
-    const isOutOfStock = useRef<string|Blob>('')
+    const isHotSale = useRef<string|Blob>('false')
+    const isOutOfStock = useRef<string|Blob>('false')
     const productImgPreview = useRef<HTMLImageElement|null>(null)
     const productImg = useRef<any>()
 
