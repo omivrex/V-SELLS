@@ -1,8 +1,14 @@
 import connectToDb from "../middleware/mongodbConnect.middleware";
 import ProductModel from "../models/product.model";
-const formidable = require('formidable');
+const multer  = require('multer');
+const {GridFsStorage} = require('multer-gridfs-storage');
 
-const form = formidable({ multiples: false});
+let storage
+
+const setStorage = async (db:any) => storage = new GridFsStorage({url: db, cache: true});
+connectToDb(setStorage)
+
+const upload = multer({ storage });
 
 export const config = {
     api: {
