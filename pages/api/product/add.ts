@@ -1,7 +1,6 @@
 import connectToDb from "../middleware/mongodbConnect.middleware";
 import ProductModel from "../models/product.model";
 const formidable = require('formidable');
-
 const form = formidable({ multiples: true});
 
 export const config = {

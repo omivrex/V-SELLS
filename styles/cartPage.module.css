@@ -1,7 +1,7 @@
 .cartegoryName {
     width: 100%;
     height: 7rem;
-    background-color: #b78028;
+    background: linear-gradient(193deg, #000000 51.9%, #3E1EE9 123%);
     position: absolute;
     top: 5.6rem;
     color: #eee;
