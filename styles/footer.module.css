@@ -12,7 +12,8 @@
     flex-direction: column;
     height: fit-content;
     align-items: center;
-    background: linear-gradient(193deg, #000000 51.9%, #3E1EE9 123%);
+    background-color: #000;
+    /* background: linear-gradient(193deg, #000000 51.9%, #3E1EE9 123%); */
     color: #eee;
     margin-left: -1%;
     margin-top: 4%;

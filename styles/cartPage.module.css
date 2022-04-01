@@ -28,13 +28,12 @@
 .productWrapper {
     display: flex;
     flex: 4 1;
-    height: -webkit-fit-content;
-    height: -moz-fit-content;
     height: fit-content;
-    background: #eee;
+    background: #00000085;
     margin: 0 auto auto 1.2rem;
     flex-wrap: wrap;
     align-content: flex-start;
+    color: #eee;
     justify-content: center;
     padding: 1rem;
 }
@@ -64,4 +63,10 @@
     padding-inline: 2rem;
     border-bottom: 1.5px solid #777;
     width: 100%;
+}
+
+@media only screen and (max-width: 430px) {
+    .filterPannel {
+        display: none;
+    }
 }

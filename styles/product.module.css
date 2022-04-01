@@ -1,8 +1,8 @@
 /* @import 'animate.css'; */
 
 .product {
-    margin: auto;
-    height: inherit;
+    margin: 0 auto;
+    height: fit-content;
     width: 14rem;
     cursor: pointer;
     padding: 4px;
@@ -38,6 +38,10 @@
 
 @media only screen and (max-width: 430px) {
     .product {
+        width: 15rem;
+    }
+
+    .frontPageProduucts {
         width: 5rem;
     }
 }

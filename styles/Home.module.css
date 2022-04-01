@@ -33,9 +33,9 @@
   text-shadow: none;
 }
 
-.cartegoriesCcntainer {
+/* .cartegoriesCcntainer {
   overflow: auto;
-}
+} */
 
 @media only screen and (max-width: 768px) {
   .title {
