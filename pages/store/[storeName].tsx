@@ -72,7 +72,7 @@ const Store = ():ReactElement => {
                                     productImgPreview.current.style.zIndex = '2';
                                     productImg.current = file
                                 }
-                            }} accept=".jpg, .jpeg, .png" type="file"/>
+                            }} accept=".jpg, .jpeg, .png" type="file" name='product-image'/>
                             Drag Image To Upload
                         </div>
                         <div>

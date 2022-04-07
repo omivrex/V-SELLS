@@ -27,7 +27,7 @@ const CartPage = ():ReactElement => {
             <Navbar shouldRenderShoppingCart = {false}></Navbar>
             <div className={styles.cartegoryName}>
                 {query.cartegoryName}
-                <div>check out the best and affordable footwears</div>
+                <div>Check Out The Best And Affordable Items</div>
             </div>
             <main className={styles.main}>
                 <div className={styles.filterPannel}>

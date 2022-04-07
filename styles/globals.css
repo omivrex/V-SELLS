@@ -12,7 +12,7 @@ html {
 }
 
 body {
-  background: linear-gradient(to right, #ffbd52 28%, #ff9d42 99%);
+  background: linear-gradient(225deg, #000000 34.9%, #e91e63 48%, #3E1EE9 98%)
 }
 
 li {
@@ -25,7 +25,7 @@ a {
 
 .header {
   border-bottom: 1px solid #e2e8f0;
-  background-color: #0069ff;
+  background: linear-gradient(193deg, #000000 51.9%, #e91e63 123%);
   color: #deedf2 !important;
   position: fixed;
   z-index: 10;
@@ -123,7 +123,7 @@ a {
     left: -100%;
     top: 5rem;
     flex-direction: column;
-    background-color: #d56100;
+    background-color: #e41e67;
     width: 100%;
     border-radius: 10px;
     text-align: center;
@@ -159,5 +159,11 @@ a {
 
   .hamburger.active .bar:nth-child(3) {
     transform: translateY(-8px) rotate(-45deg);
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .product {
+    width: 5rem !important;
   }
 }

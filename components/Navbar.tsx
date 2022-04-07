@@ -1,5 +1,6 @@
 import Script from 'next/script';
 import { BiCartAlt } from 'react-icons/bi';
+import { BsTelephone, BsCurrencyExchange } from 'react-icons/bs';
 import { IconContext } from "react-icons";
 import { ReactElement } from 'react'
 const Navbar = (props:any):ReactElement => {
@@ -13,13 +14,13 @@ const Navbar = (props:any):ReactElement => {
                 <span title="search"><img style={{width: '100%'}} src="./search.svg"/></span>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link">Call To Order</a>
+                  <a href="#" className="nav-link"><BsTelephone/></a>
               </li>
               <li className="nav-item">
                   <a href="#" className="nav-link">Sell</a>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link">Currency</a>
+                  <a href="#" className="nav-link"><BsCurrencyExchange/></a>
               </li>
           </ul>
               <div className='shopping-cart-wrapper'>

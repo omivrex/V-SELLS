@@ -7,7 +7,7 @@ const products:ReactElement[] = []
 
 for (let index = 0; index < noOfProductsToDisp; index++) {
     products.push(
-        <Product key={index}/>
+        <Product extraClass={'frontPageProduucts'} key={index}/>
     )
 }
 
@@ -15,7 +15,7 @@ const Cartegory = ():ReactElement => {
     return ( 
         <div className={styles.cartegory}>
             <div className={styles.name}>
-                Checkout The Best Fitting Footwear
+                Checkout The Best Items
                 <span className={styles.Image}>
                     <Image width={17} height={17} src="/forward.svg"/>
                 </span>

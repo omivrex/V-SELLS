@@ -1,14 +1,7 @@
 import connectToDb from "../middleware/mongodbConnect.middleware";
 import ProductModel from "../models/product.model";
-const multer  = require('multer');
-const {GridFsStorage} = require('multer-gridfs-storage');
-
-let storage
-
-const setStorage = async (db:any) => storage = new GridFsStorage({url: db, cache: true});
-connectToDb(setStorage)
-
-const upload = multer({ storage });
+const multer = require('multer');
+const path = require('path');
 
 export const config = {
     api: {
@@ -25,22 +18,33 @@ type filedType = {
     isOutOfStock: Boolean,
 }
 
+const storage = multer.diskStorage({
+    destination: (req:any, file:any, callback:any) => {
+      callback(null, '../../../public/productImgs')
+    },
+
+    filename: (req:any, file:any, callback:any) => {
+      console.log('file', file)
+      callback(null, Date.now()+path.ext(file.originalname))
+    }
+
+})
+
+const storageMiddleware = multer({storage})
+
 export default function (req:any, res:any) {
     try {
-        form.parse(req, (err:string, fields:filedType, image:Blob) => {
-            err? console.error(err):"";
-            fields.cartegories = JSON.parse(fields.cartegories) as string[];
-            console.log('image sent', image);
-            connectToDb(async (isConnected:boolean) => {
-                if (isConnected) {
-                    const newProduct = new ProductModel({...fields, image})
-                    console.log(newProduct, 'add.js line 21');
-                    await newProduct.save()
-                    res.status = 200;
-                    res.send('recieved...')
-                }
-            })
-        });
+        console.log('req.body', req.body)
+        storageMiddleware.single('product-image')
+        // connectToDb(async (isConnected:boolean) => {
+        //     if (isConnected) {
+        //         const newProduct = new ProductModel(fields)
+        //         console.log(newProduct, 'add.js line 21');
+        //         await newProduct.save()
+        //         res.status = 200;
+        //         res.send('recieved...')
+        //     }
+        // })
     } catch (error) {
         console.error(error);
     }
