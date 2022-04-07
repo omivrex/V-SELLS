@@ -29,6 +29,7 @@ const Store = ():ReactElement => {
     }
 
     const sendAddReq = async (formData:FormData) => {
+        console.log('formData', formData)
         const res = await fetch('/api/product/add', { 
             body: formData,
             method: 'POST'
