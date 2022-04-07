@@ -14,58 +14,58 @@ const Store = ():ReactElement => {
     const isOutOfStock = useRef<string|Blob>('false')
     const productImgPreview = useRef<HTMLImageElement|null>(null)
     const productImg = useRef<any>()
+    const productForm = useRef<HTMLFormElement|any>()
 
-    const addProduct = async (event: any) => {
-        event.preventDefault()
-        const formData = new FormData();
-        formData.append('name', name.current)
-        formData.append('price', price.current)
-        formData.append('cartegories', JSON.stringify(cartegories.current))
-        formData.append('isHotSale', isHotSale.current)
-        formData.append('isOutOfStock', isOutOfStock.current)
-        formData.append('details', details.current)
-        formData.append('img', productImg.current)
-        await sendAddReq(formData)
+    const addProduct = () => {
+        const formData = new FormData(productForm.current);
+        formData.set('name', name.current)
+        formData.set('price', price.current)
+        formData.set('cartegories', JSON.stringify(cartegories.current))
+        formData.set('isHotSale', isHotSale.current)
+        formData.set('isOutOfStock', isOutOfStock.current)
+        formData.set('details', details.current)
+        formData.set('productImg', productImg.current, new Date().getTime().toString())
+        console.log('formData', formData)
+        sendAddReq(formData)
     }
 
-    const sendAddReq = async (formData:FormData) => {
-        console.log('formData', formData)
-        const res = await fetch('/api/product/add', { 
+    const sendAddReq = (formData:FormData) => {
+        fetch('/api/product/add', { 
+            method: 'post',
             body: formData,
-            method: 'POST'
         })
     }
     return ( 
         <>
             <div className={styles.formWrapper}>
-                <form className={styles.form}>
+                <form ref = {productForm} className={styles.form}>
                     <div className={styles.textFieldWrapper}>
                         <div>
                             <label>Name</label>
-                            <input required onInput={(e)=> name.current = (e.target as HTMLInputElement).value} type="text"/>
+                            <input name="name" required onInput={(e)=> name.current = (e.target as HTMLInputElement).value} type="text"/>
                         </div>
                         <div>
                             <label>Price</label>
-                            <input required onInput={(e)=> price.current = (e.target as HTMLInputElement).value} type="text"/>
+                            <input name="price" required onInput={(e)=> price.current = (e.target as HTMLInputElement).value} type="text"/>
                         </div>
                         <div>
                             <label>Cartegories</label>
-                            <input required onInput={(e)=> cartegories.current = (e.target as HTMLInputElement).value.split(' ')} type="text"/>
+                            <input name="cartegories" required onInput={(e)=> cartegories.current = (e.target as HTMLInputElement).value.split(' ')} type="text"/>
                         </div>
                         <div>
                             <label>Hot Sale</label>
-                            <input onChange = {(e) =>isHotSale.current = e.target.checked.toString()} required type="checkbox"/>
+                            <input name="isHotSale" onChange = {(e) =>isHotSale.current = e.target.checked.toString()} type="checkbox"/>
                         </div>
                         <div>
                             <label>Out Of Stock</label>
-                            <input onChange = {(e) =>isOutOfStock.current = e.target.checked.toString()} required type="checkbox"/>
+                            <input name="isOutOfStock" onChange = {(e) =>isOutOfStock.current = e.target.checked.toString()} type="checkbox"/>
                         </div>
                     </div>
                     <div className={styles.imgAndButnWrapper}>
                         <div className={styles.imgWrapper}>
                             <img width="100%" height="100%" style={{opacity:0, width:'100%', height:'100%'}} ref={productImgPreview} src='#'/>
                             <AiOutlinePicture size={'100%'} color={'#ffbd52'}/>
-                            <input required ref={fileInput} onChange={()=>{
+                            <input name="productImg" required ref={fileInput} onChange={()=>{
                                 const [file]:any = fileInput.current?fileInput.current.files:null
                                 if (file && productImgPreview.current) {
                                     productImgPreview.current.src = URL.createObjectURL(file)
@@ -73,14 +73,17 @@ const Store = ():ReactElement => {
                                     productImgPreview.current.style.zIndex = '2';
                                     productImg.current = file
                                 }
-                            }} accept=".jpg, .jpeg, .png" type="file" name='product-image'/>
+                            }} accept=".jpg, .jpeg, .png" type="file"/>
                             Drag Image To Upload
                         </div>
                         <div>
                             <label>Details</label>
-                            <textarea onInput={(e)=> details.current = (e.target as HTMLTextAreaElement).value}></textarea>
+                            <textarea name="details" onInput={(e)=> details.current = (e.target as HTMLTextAreaElement).value}></textarea>
                         </div>
-                        <button type="submit" onClick={addProduct}>ADD</button>
+                        <button type="submit" onClick={e=> {
+                            e.preventDefault()
+                            addProduct()
+                        }}>ADD</button>
                     </div>
                 </form>
             </div>

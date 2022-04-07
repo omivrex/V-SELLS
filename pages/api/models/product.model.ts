@@ -24,9 +24,8 @@ const productSchema = new Schema({
         type: Boolean,
     },
     image: {
-        type: Buffer,
+        type: String,
         required: true,
-        contentType: String,
     }
 })
 
