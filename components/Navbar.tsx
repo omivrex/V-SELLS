@@ -34,7 +34,7 @@ const Navbar = (props:any):ReactElement => {
               <span className="bar"></span>
           </div>
         </nav>
-        <Script type="text/javascript" src="./scripts/homepageInteraction.js"/>
+        <Script type="text/javascript" src="../scripts/homepageInteraction.js"/>
       </header>
     );
 }
