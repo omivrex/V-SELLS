@@ -16,6 +16,18 @@
   background-position-y: center;
 }
 
+.sectionHeading {
+  width: 100%;
+  margin: auto;
+  color: #eee;
+  text-align: center;
+  font-size: 2.5em;
+}
+
+.sectionHeading>span {
+  border-bottom: 2px solid #eee;
+}
+
 .title {
   font-size: 12rem;
   position: relative;
@@ -33,9 +45,13 @@
   text-shadow: none;
 }
 
-/* .cartegoriesCcntainer {
-  overflow: auto;
-} */
+.cartegoriesCcntainer {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+  justify-content:space-around;
+}
 
 @media only screen and (max-width: 768px) {
   .title {

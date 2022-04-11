@@ -11,7 +11,7 @@ const Product = ({onclick, extraClass}:any):ReactElement => {
             <span ref={productImg} className={styles.productImg}>
                 <Image onLoad={()=> productImg.current.style.animation = 'slideInUp 1.5s ease forwards'} height={150} width={150} src="/product.jpg"/>
             </span>
-            <div className={styles.price}>$190</div>
+           {!extraClass?<div className={styles.price}>$190</div>:''}
         </div>
      );
 }

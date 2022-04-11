@@ -1,24 +1,28 @@
 .cartegory {
-    height: 27rem;
+    height: fit-content;
     position: relative;
-    max-width: 95vw;
+    padding: 2rem 0px;
+    flex: 0.5;
+    width: 18rem;
     margin: 50px auto;
     background-color: #00000085;
     color: #eee;
     border-radius: 5px;
+    display: flex;
+    flex-direction: column;
     animation: slideInUp 1.5s forwards ease;
 }
 
 .name {
     font-size: 2.2em;
-    width: inherit;
-    height: 14%;
-    padding: 9px 0px 1px 22px;
-    border-bottom: 1px solid #777;
+    width: 100%;
+    flex: 0.3;
+    padding: 2rem auto;
     font-family: sans-serif;
+    text-align: center;
 }
 
-.Image {
+.forwardIcon {
     float: right;
     margin-right: 20px;
     cursor: pointer;
@@ -26,9 +30,9 @@
 }
 
 .prodWrapper {
-    width: inherit;
-    display: flex;
-    height: 22rem;
+    width: 100%;
+    flex: 0.8;
+    /* height: 22rem; */
     margin-top: 0.3em;
 }
 
@@ -47,7 +51,7 @@
     }
 }
 
-@media only screen and (max-width: 430px) {
+/* @media only screen and (max-width: 430px) {
     .name {
         font-size: 1.1em;
         height: 18%;
@@ -60,7 +64,7 @@
     .cartegory {
         height: 15rem;
     }
-}
+} */
 
 @keyframes slideInUp {
     from {
