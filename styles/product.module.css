@@ -9,6 +9,13 @@
     padding-top: 24px;
 }
 
+.frontPageProduucts {
+    height: fit-content;
+    width: 14rem;
+    cursor: pointer;
+    padding: 4px;
+}
+
 .product:hover {
     animation: 0.5s ease 0s 1 normal pulse !important;
 }
@@ -26,7 +33,7 @@
     width: inherit;
 }
 
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
     .product {
         width: 8.7rem;
     }
@@ -34,7 +41,7 @@
     .price {
         font-size: 1.1em;
     }
-}
+} */
 
 /* @media only screen and (max-width: 430px) {
     .product {

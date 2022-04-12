@@ -10,10 +10,18 @@
   display: flex;
   flex-direction: row;
   align-items: flex-start;
-  background-image: url("../public/shoppingBagTrans.png");
+  /* background-image: url("../public/phoneImg.png"); */
   background-repeat: no-repeat;
   background-position-x: right;
   background-position-y: center;
+}
+
+.sampleImg {
+  margin: auto;
+  width: 25rem;
+  height: 25rem;
+  filter: drop-shadow(1px 3px 20px black);
+  animation: pulse 2s ease infinite;
 }
 
 .sectionHeading {
@@ -31,7 +39,7 @@
 .title {
   font-size: 12rem;
   position: relative;
-  margin: auto 0 auto 6rem;
+  margin: auto 2rem;
   font-weight: 100;
   color: #deedf2;
   font-family: 'Roboto', sans-serif;
@@ -53,6 +61,23 @@
   justify-content:space-around;
 }
 
+@keyframes pulse {
+  from {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+
+  50% {
+    -webkit-transform: scale3d(1.02, 1.02, 1.02);
+    transform: scale3d(1.02, 1.02, 1.02);
+  }
+
+  to {
+    -webkit-transform: scale3d(1, 1, 1);
+    transform: scale3d(1, 1, 1);
+  }
+}
+
 @media only screen and (max-width: 768px) {
   .title {
     font-size: 5rem;
@@ -60,5 +85,20 @@
 
   .welcomeBanner {
     height: 52vh;
+  }
+
+  .sampleImg {
+    width: 15rem;
+    height: 15rem;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
   }
 }

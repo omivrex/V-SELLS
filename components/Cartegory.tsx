@@ -1,6 +1,5 @@
 import styles from '../styles/cartegoryComp.module.css'
 import Product from './Product'
-import Image from 'next/image'
 import { ReactElement } from 'react'
 const noOfProductsToDisp = 1
 const products:ReactElement[] = []
@@ -16,9 +15,6 @@ const Cartegory = ():ReactElement => {
         <div className={styles.cartegory}>
             <div className={styles.prodWrapper}>
                 {products}
-            </div>
-            <div className={styles.name}>
-                Shoes
             </div>
         </div>
      );

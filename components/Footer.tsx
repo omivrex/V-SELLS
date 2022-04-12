@@ -10,11 +10,11 @@ const Footer = ():ReactElement => {
       <footer className={styles.footer}>
         <h1>Desinged By Rex Omiv</h1>
         <p>
-          Rex is a fullstack web and mobile developer with a lot of experience under his belt.
+          I am a fullstack web and mobile developer.
           <br />
-          He currently works as a freelance developer, he's focused on building applications for his clients that gives them the satisfaction they deserve.
+          I currently works as a freelance developer, I'am focused on building applications for my clients that will gives them the satisfaction they deserve.
           <br/>
-          V-SELLS is one of his web applications, it is an E-commerce web app desinged to showcase my frontend skills.
+          V-SELLS is one of my web applications, it is an E-commerce web application desinged to showcase my frontend skills.
         </p>
         <section className={styles.contactInfo}>
           <Link href={'mailto:omivrex@gmail.com'}>
