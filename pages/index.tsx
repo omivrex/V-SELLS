@@ -14,7 +14,9 @@ const cartegories:ReactElement[] = []
 for (let index = 0; index < noOfCartegoriesToDisp; index++) {
     cartegories.push(
       <Link href={'/cartegories'} passHref={true}>
-        <Cartegory/>
+        <div>
+          <Cartegory/>
+        </div>
       </Link>
     )
 }
@@ -25,7 +27,9 @@ const hotSales:ReactElement[] = []
 for (let index = 0; index < noOfHotSalesToDisp; index++) {
     hotSales.push(
       <Link href={'/cartegories'} passHref={true}>
-        <Cartegory/>
+        <div>
+          <Cartegory/>
+        </div>
       </Link>
     )
 }
@@ -65,11 +69,11 @@ export default function Home():ReactElement {
           </h1>
           <img className={styles.sampleImg} id="sampleImg" src={sampleImages[index]} />
         </div>
-        <section className={styles.cartegoriesCcntainer}>
+        <section className={styles.cartegoriesContainer}>
           <div className={styles.sectionHeading}><span>Hot Sales</span></div>
           {hotSales}
         </section>
-        <section className={styles.cartegoriesCcntainer}>
+        <section className={styles.cartegoriesContainer}>
           <div className={styles.sectionHeading}><span>Cartegories</span></div>
           {cartegories}
         </section>

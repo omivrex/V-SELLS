@@ -78,7 +78,7 @@ a {
   width: 90%;
 }
 
-.nav-item > span {
+.nav-item > span:not(.nav-link) {
   flex: 0.17 1;
   background: #fff;
   border-radius: 0 5px 5px 0px;

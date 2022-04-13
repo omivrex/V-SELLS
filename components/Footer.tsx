@@ -18,19 +18,29 @@ const Footer = ():ReactElement => {
         </p>
         <section className={styles.contactInfo}>
           <Link href={'mailto:omivrex@gmail.com'} passHref={true}>
-            <SiGmail size={'40%'} color={'#ff5722'}/>
+            <span>
+              <SiGmail size={'40%'} color={'#ff5722'}/>
+            </span>
           </Link>
           <Link href={'https://web.facebook.com/rex.omivii'} passHref={true}>
-            <BsFacebook size={'40%'} color={'#0164b3'}/>
+            <span>
+              <BsFacebook size={'40%'} color={'#0164b3'}/>
+            </span>
           </Link>
           <Link href={'https://wa.me/+2347084973294'} passHref={true}>
-            <IoLogoWhatsapp size={'40%'} color={'#4caf50'}/>
+            <span>
+              <IoLogoWhatsapp size={'40%'} color={'#4caf50'}/>
+            </span>
           </Link>
           <Link href={'https://twitter.com/RexOmiv'} passHref={true}>
-            <IoLogoTwitter size={'40%'} color={'#0164b3'}/>
+            <span>
+              <IoLogoTwitter size={'40%'} color={'#0164b3'}/>
+            </span>
           </Link>
           <Link href={'https://linkedin.com/in/Rex-Omiv'} passHref={true}>
-            <IoLogoLinkedin size={'40%'} color={'#0164b3'}/>
+            <span>
+              <IoLogoLinkedin size={'40%'} color={'#0164b3'}/>
+            </span>
           </Link>
         </section>
       </footer>

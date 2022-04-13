@@ -24,6 +24,16 @@
   animation: pulse 2s ease infinite;
 }
 
+/* section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+section>div {
+  margin: auto;
+} */
+
 .sectionHeading {
   width: 100%;
   margin: auto;
@@ -53,7 +63,7 @@
   text-shadow: none;
 }
 
-.cartegoriesCcntainer {
+.cartegoriesContainer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
