@@ -57,6 +57,23 @@ export default function Home():ReactElement {
       <Head>
         <title>V-Sells</title>
         <link rel="icon" href="/favicon.ico" />
+        <meta name="description" content="E-Commerce website built by Rex Omiv"/>
+
+        <meta itemProp="name" content="V-SELLS"/>
+        <meta itemProp="description" content="E-Commerce website built by Rex Omiv"/>
+        <meta itemProp="image" content="/sample.jpg"/>
+
+        
+        <meta property="og:url" content="https://v-sells.vercel.app"/>
+        <meta property="og:type" content="website"/>
+        <meta property="og:title" content="V-SELLS"/>
+        <meta property="og:description" content="E-Commerce website built by Rex Omiv"/>
+        <meta property="og:image" content="/sample.jpg"/>
+
+        <meta name="twitter:card" content="summary_large_image"/>
+        <meta name="twitter:title" content="V-SELLS"/>
+        <meta name="twitter:description" content="E-Commerce website built by Rex Omiv"/>
+        <meta name="twitter:image" content="/sample.jpg"/>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
 
