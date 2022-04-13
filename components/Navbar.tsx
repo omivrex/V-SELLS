@@ -3,24 +3,35 @@ import { BiCartAlt } from 'react-icons/bi';
 import { BsTelephone, BsCurrencyExchange } from 'react-icons/bs';
 import { IconContext } from "react-icons";
 import { ReactElement } from 'react'
+import Link from 'next/link';
 const Navbar = (props:any):ReactElement => {
     return ( 
       <header className="header">
         <nav className="navbar">
-          <a href="/" className="nav-logo">V-SELLS</a>
+          <Link href="/" passHref={true}> 
+            <span className="nav-logo">
+              V-SELLS
+            </span>
+          </Link>
           <ul className="nav-menu">
               <li className="nav-item search-container">
                 <input className="search-bar" placeholder="Search your for favorite product"/>
                 <span title="search"><img style={{width: '100%'}} src="./search.svg"/></span>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link"><BsTelephone/></a>
+                  <Link href="#" passHref={true}>
+                    <span className="nav-link"><BsTelephone/></span>
+                  </Link>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link">Sell</a>
+                  <Link href="#" passHref={true}>
+                    <span className="nav-link">Sell</span>
+                  </Link>
               </li>
               <li className="nav-item">
-                  <a href="#" className="nav-link"><BsCurrencyExchange/></a>
+                  <Link href="#" passHref={true}>
+                    <span className="nav-link"><BsCurrencyExchange/></span>
+                  </Link>
               </li>
           </ul>
               <div className='shopping-cart-wrapper'>

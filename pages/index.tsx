@@ -13,10 +13,8 @@ const cartegories:ReactElement[] = []
 
 for (let index = 0; index < noOfCartegoriesToDisp; index++) {
     cartegories.push(
-      <Link href={'/cartegories'}>
-        <a>
-          <Cartegory/>
-        </a>
+      <Link href={'/cartegories'} passHref={true}>
+        <Cartegory/>
       </Link>
     )
 }
@@ -26,10 +24,8 @@ const hotSales:ReactElement[] = []
 
 for (let index = 0; index < noOfHotSalesToDisp; index++) {
     hotSales.push(
-      <Link href={'/cartegories'}>
-        <a>
-          <Cartegory/>
-        </a>
+      <Link href={'/cartegories'} passHref={true}>
+        <Cartegory/>
       </Link>
     )
 }

@@ -86,9 +86,9 @@ const Store = ():ReactElement => {
                 <div className={styles.fieldWrapper}>
                     <div>
                         <label>Add Cartegories</label>
-                        <span className={styles.addCart}>+</span>
+                        {/* <span className={styles.addCart}>+</span> */}
 
-                        {/* <input name="cartegories" required onInput={(e)=> cartegories.current = (e.target as HTMLInputElement).value.split(' ')} type="text"/> */}
+                        <input name="cartegories" required onInput={(e)=> cartegories.current = (e.target as HTMLInputElement).value.split(' ')} type="text"/>
                     </div>
                     <div>
                         <label>Details</label>

@@ -17,30 +17,20 @@ const Footer = ():ReactElement => {
           V-SELLS is one of my web applications, it is an E-commerce web application desinged to showcase my frontend skills.
         </p>
         <section className={styles.contactInfo}>
-          <Link href={'mailto:omivrex@gmail.com'}>
-            <a>
-              <SiGmail size={'40%'} color={'#ff5722'}/>
-            </a>
+          <Link href={'mailto:omivrex@gmail.com'} passHref={true}>
+            <SiGmail size={'40%'} color={'#ff5722'}/>
           </Link>
-          <Link href={'https://web.facebook.com/rex.omivii'}>
-            <a>
-              <BsFacebook size={'40%'} color={'#0164b3'}/>
-            </a>
+          <Link href={'https://web.facebook.com/rex.omivii'} passHref={true}>
+            <BsFacebook size={'40%'} color={'#0164b3'}/>
           </Link>
-          <Link href={'https://wa.me/+2347084973294'}>
-            <a>
-              <IoLogoWhatsapp size={'40%'} color={'#4caf50'}/>
-            </a>
+          <Link href={'https://wa.me/+2347084973294'} passHref={true}>
+            <IoLogoWhatsapp size={'40%'} color={'#4caf50'}/>
           </Link>
-          <Link href={'https://twitter.com/RexOmiv'}>
-            <a>
-              <IoLogoTwitter size={'40%'} color={'#0164b3'}/>
-            </a>
+          <Link href={'https://twitter.com/RexOmiv'} passHref={true}>
+            <IoLogoTwitter size={'40%'} color={'#0164b3'}/>
           </Link>
-          <Link href={'https://linkedin.com/in/Rex-Omiv'}>
-            <a>
-              <IoLogoLinkedin size={'40%'} color={'#0164b3'}/>
-            </a>
+          <Link href={'https://linkedin.com/in/Rex-Omiv'} passHref={true}>
+            <IoLogoLinkedin size={'40%'} color={'#0164b3'}/>
           </Link>
         </section>
       </footer>
