@@ -12,7 +12,7 @@ const Footer = ():ReactElement => {
         <p>
           I am a fullstack web and mobile developer.
           <br />
-          I currently works as a freelance developer, I'am focused on building applications for my clients that will gives them the satisfaction they deserve.
+          I currently works as a freelance developer, I&lsquo;am focused on building applications for my clients that will gives them the satisfaction they deserve.
           <br/>
           V-SELLS is one of my web applications, it is an E-commerce web application desinged to showcase my frontend skills.
         </p>
