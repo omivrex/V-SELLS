@@ -12,7 +12,7 @@ export const config = {
 type filedType = {
   name: String,
   price: String,
-  cartegories: any,
+  cartegories: String[],
   details: String,
   isHotSale: Boolean,
   isOutOfStock: Boolean,
