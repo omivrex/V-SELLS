@@ -1,4 +1,4 @@
-import { useRef } from "react";
+import { useRef, useState } from "react";
 import styles from "../../styles/store.module.css";
 import { AiOutlinePicture } from 'react-icons/ai';
 import { ReactElement } from 'react'
@@ -6,11 +6,11 @@ import Navbar from "../../components/Navbar";
 import Footer from "../../components/Footer";
 
 const Store = ():ReactElement => {
+    const [cartegories, setcartegories] = useState<string[]>([''])
     
     const fileInput = useRef<HTMLInputElement|null>(null)
     const name = useRef<string|Blob>('')
     const price = useRef<string|Blob>('')
-    const cartegories = useRef<string[]>([''])
     const details = useRef<string|Blob>('')
     const isHotSale = useRef<string|Blob>('false')
     const isOutOfStock = useRef<string|Blob>('false')
@@ -22,7 +22,7 @@ const Store = ():ReactElement => {
         const formData = new FormData(productForm.current);
         formData.set('name', name.current)
         formData.set('price', price.current)
-        formData.set('cartegories', JSON.stringify(cartegories.current))
+        formData.set('cartegories', JSON.stringify(cartegories))
         formData.set('isHotSale', isHotSale.current)
         formData.set('isOutOfStock', isOutOfStock.current)
         formData.set('details', details.current)
@@ -36,6 +36,10 @@ const Store = ():ReactElement => {
             method: 'post',
             body: formData,
         })
+    }
+
+    const addCart = () => {
+        setcartegories([...cartegories, ''])
     }
 
     return ( 
@@ -85,21 +89,35 @@ const Store = ():ReactElement => {
 
                 <div className={styles.fieldWrapper}>
                     <div>
-                        <label>Add Cartegories</label>
-                        <span className={styles.addCart}>+</span>
-
+                        <label style={{margin: 'auto',height: 'fit-content'}}>Add Cartegories</label>
+                        <span onClick={addCart} className={styles.addCart}>+</span>
                         {/* <input name="cartegories" required onInput={(e)=> cartegories.current = (e.target as HTMLInputElement).value.split(' ')} type="text"/> */}
+                    </div>
+                    <div>
+                        <ul>
+                            {cartegories.map((cartegory, index)=> (
+                                <li className={styles.cartData} key={index.toString()}>
+                                    <input type="text" name="cartegory" id="" defaultValue={cartegory} onInput={e=> cartegories[index] = (e.target as HTMLInputElement).value}/>
+                                    <span title="close" onClick={()=> {
+                                        cartegories.splice(index,1)
+                                        console.log(index)
+                                        setcartegories([... cartegories])
+                                    }}>x</span>
+                                </li>
+                            ))}
+                        </ul>
                     </div>
                     <div>
                         <label>Details</label>
                         <textarea name="details" onInput={(e)=> details.current = (e.target as HTMLTextAreaElement).value}></textarea>
                     </div>
-                    <button type="submit" onClick={e=> {
+                </div>
+                <div className={styles.fieldWrapper}>
+                    <button type="submit" id={styles.submitButn} onClick={e=> {
                         e.preventDefault()
                         addProduct()
                     }}>ADD</button>
                 </div>
-                
             </form>
             <Footer/>
         </>

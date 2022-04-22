@@ -1,26 +1,25 @@
 .form {
     background-color: #eee;
-    width: 89vw;
-    height: 73vh;
+    width: 100%;
+    height: 100vh;
     -webkit-box-shadow: 0 0 11px 0 #777;
-    margin: 13rem auto;
     box-shadow: 0 0 11px 0 #777;
-    border-radius: 18px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    /* width: 100%;
-    height: 100%; */
     overflow-y: auto;
+    top: 5.5rem;
+    position: relative;
 }
 
 .fieldWrapper{
     display: flex;
     flex-direction: row;
-    height: inherit;
+    height: fit-content;
     flex: 1 1;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    align-content: flex-start;
+    margin: auto;
 }
 
 .fieldWrapper>div {
@@ -29,24 +28,35 @@
     font-family: 'Roboto', sans-serif;
     width: 100%;
     display: flex;
+    height: -webkit-fit-content;
+    height: -moz-fit-content;
     height: fit-content;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
-.fieldWrapper>div>input[type="text"] {
+.fieldWrapper>div>label {
+    vertical-align: baseline;
+    height: 100%;
+    align-self: end;
+}
+
+.fieldWrapper>div>input[type="text"],
+.cartData>input[type="text"]
+{
     border: none;
     height: 2.3rem;
-    width: 72%;
-    float: right;
+    width: 19rem;
+    background: none;
+    border-bottom: 2px solid #000;
+    text-align: center;
+    outline: none;
 }
 
-
-.fieldWrapper>button {
-    align-self: flex-start;
-    background-color: #ffbd52;
-    border: none;
-    color: #eee;
-    padding: 1rem 5rem;
+.cartData>span {
     cursor: pointer;
+    font-size: 1.2em;
+    font-family: sans-serif;
 }
 
 .fieldWrapper>div>.addCart {
@@ -60,13 +70,14 @@
 
 .imgWrapper {
     align-self: flex-start;
-    max-width: 33rem;
-    max-height: 33rem;
+    max-width: 78%;
     background-color: rgb(214, 214, 214);
     display: grid;
     color: #777;
     font-size: 2em;
-    margin: auto 1rem;
+    top: 1rem;
+    position: relative;
+    margin: auto;
     text-align: center;
 }
 
@@ -88,12 +99,29 @@
 
 .checkboxContainer {
     display: flex;
-    flex: 0.5;
+    width: 43%;
+    justify-content: space-around;
+    flex-direction: row;
 }
 
 .checkbox {
     transform: scale(1.5);
     top: 3px;
     position: relative;
-    margin: 0 auto;
+    margin: 0 0 0 auto;
+}
+
+#butnWrapper {
+    width: 100%;
+}
+
+
+#submitButn {
+    align-self: flex-start;
+    background-color: #ffbd52;
+    border: none;
+    color: #eee;
+    padding: 1rem 5rem;
+    cursor: pointer;
+    margin: auto;
 }
