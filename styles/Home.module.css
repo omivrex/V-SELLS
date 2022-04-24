@@ -18,6 +18,7 @@
 
 .sampleImg {
   margin: auto;
+  margin-right: 13vw;
   width: 25rem;
   height: 25rem;
   filter: drop-shadow(1px 3px 20px black);
