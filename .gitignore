@@ -29,7 +29,9 @@ yarn-error.log*
 .env.development.local
 .env.test.local
 .env.production.local
-/public/productImgs
 
 # vercel
 .vercel
+
+#product Images
+**/public/

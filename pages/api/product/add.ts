@@ -43,9 +43,7 @@ apiRoute.post((req:any, res:any) => {
   connectToDb(async (isConnected:boolean) => {
     if (isConnected) {
       const {cartegories, ...otherFields} = req.body
-      console.log('product data', {...otherFields, cartegories: JSON.parse(cartegories), image: filename})
       const newProduct = new ProductModel({...otherFields, cartegories: JSON.parse(cartegories), image: filename})
-      console.log(newProduct, 'add.js line 21');
       await newProduct.save()
       cartHandler(newProduct)
       res.status(200).json({ data: 'success' });
