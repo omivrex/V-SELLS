@@ -1,22 +1,13 @@
 import connectToDb from "../middleware/mongodbConnect.middleware";
 import ProductModel from "../models/product.model";
 import nextConnect from 'next-connect';
+import cartHandler from "../controllers/cartegorey.controller";
 const multer = require('multer');
 
 export const config = {
   api: {
     bodyParser: false
   }
-}
-
-type filedType = {
-  name: String,
-  price: String,
-  cartegories: String[],
-  details: String,
-  isHotSale: Boolean,
-  isOutOfStock: Boolean,
-  image: String,
 }
 
 let filename:string = ''
@@ -56,6 +47,7 @@ apiRoute.post((req:any, res:any) => {
       const newProduct = new ProductModel({...otherFields, cartegories: JSON.parse(cartegories), image: filename})
       console.log(newProduct, 'add.js line 21');
       await newProduct.save()
+      cartHandler(newProduct)
       res.status(200).json({ data: 'success' });
     }
   })
