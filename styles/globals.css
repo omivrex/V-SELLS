@@ -106,6 +106,7 @@ a {
   text-align: center;
   width: 7.8rem;
   height: 100%;
+  cursor: pointer;
 }
 
 .shopping-cart-wrapper {
